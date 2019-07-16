@@ -54,11 +54,13 @@ class Grid extends Component {
   }
 
   handleClick = event => {
+    console.log('YO YO YO');
     const elemOffset = this.getElementOffset();
     const offsetX = event.clientX - elemOffset.x;
     const offsetY = event.clientY - elemOffset.y;
     const x = Math.floor(offsetX / this.state.CELL_SIZE);
     const y = Math.floor(offsetY / this.state.CELL_SIZE);
+    console.log(x, y);
 
     if (x >= 0 && x <= this.cols && y >= 0 && y <= this.rows) {
       this.board[y][x] = !this.board[y][x];
