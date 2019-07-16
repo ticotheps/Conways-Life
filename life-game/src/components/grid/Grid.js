@@ -6,7 +6,7 @@ import './Grid.css';
 class Grid extends Component {
   state = {
     cells: [],
-    interval: 1500,
+    interval: 1000,
     isRunning: false,
     CELL_SIZE: 10,
     WIDTH: 500,
@@ -104,8 +104,10 @@ class Grid extends Component {
         this.board[y][x] = Math.random() >= 0.5;
       }
     }
-
-    this.setState({ cells: this.makeCells() });
+    this.setState({
+      counter: 0,
+      cells: this.makeCells(),
+    });
   };
 
   runIteration() {
@@ -131,11 +133,11 @@ class Grid extends Component {
       }
     }
     this.board = newBoard;
-    this.setState({ cells: this.makeCells() });
+    console.log('Generation: ', this.state.counter);
     this.setState((prevState, { counter }) => ({
+      cells: this.makeCells(),
       counter: prevState.counter + 1,
     }));
-    console.log(this.state.counter);
     this.timeoutHandler = window.setTimeout(() => {
       this.runIteration();
     }, this.state.interval);
