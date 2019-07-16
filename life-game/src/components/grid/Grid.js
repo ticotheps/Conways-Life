@@ -6,11 +6,12 @@ import './Grid.css';
 class Grid extends Component {
   state = {
     cells: [],
-    interval: 100,
+    interval: 500,
     isRunning: false,
     CELL_SIZE: 10,
     WIDTH: 500,
     HEIGHT: 500,
+    counter: 0,
   };
 
   rows = this.state.HEIGHT / this.state.CELL_SIZE;
@@ -56,7 +57,6 @@ class Grid extends Component {
   }
 
   handleClick = event => {
-    console.log('YO YO YO');
     const elemOffset = this.getElementOffset();
     const offsetX = event.clientX - elemOffset.x;
     const offsetY = event.clientY - elemOffset.y;
@@ -92,7 +92,10 @@ class Grid extends Component {
 
   handleClear = () => {
     this.board = this.makeEmptyBoard();
-    this.setState({ cells: this.makeCells() });
+    this.setState({
+      cells: this.makeCells(),
+      counter: 0,
+    });
   };
 
   handleRandom = () => {
@@ -111,8 +114,11 @@ class Grid extends Component {
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.cols; x++) {
         let neighbors = this.calculateNeighbors(this.board, x, y);
+        /* Checks to see if cell exists */
         if (this.board[y][x]) {
+          /* Satisfies 2nd rule of Conway's Game of Life */
           if (neighbors === 2 || neighbors === 3) {
+            /* This cell lives to the next generation */
             newBoard[y][x] = true;
           } else {
             newBoard[y][x] = false;
@@ -123,6 +129,10 @@ class Grid extends Component {
           }
         }
       }
+      this.setState((prevState, { counter }) => ({
+        counter: prevState.counter + 1,
+      }));
+      console.log(this.state.counter);
     }
     this.board = newBoard;
     this.setState({ cells: this.makeCells() });
@@ -165,6 +175,8 @@ class Grid extends Component {
   render() {
     return (
       <div>
+        <h2>Generation: {this.state.counter}</h2>
+        <br />
         <div
           className='Board'
           style={{
