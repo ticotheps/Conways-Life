@@ -6,7 +6,7 @@ import './Grid.css';
 class Grid extends Component {
   state = {
     cells: [],
-    interval: 500,
+    interval: 1500,
     isRunning: false,
     CELL_SIZE: 10,
     WIDTH: 500,
@@ -129,13 +129,13 @@ class Grid extends Component {
           }
         }
       }
-      this.setState((prevState, { counter }) => ({
-        counter: prevState.counter + 1,
-      }));
-      console.log(this.state.counter);
     }
     this.board = newBoard;
     this.setState({ cells: this.makeCells() });
+    this.setState((prevState, { counter }) => ({
+      counter: prevState.counter + 1,
+    }));
+    console.log(this.state.counter);
     this.timeoutHandler = window.setTimeout(() => {
       this.runIteration();
     }, this.state.interval);
