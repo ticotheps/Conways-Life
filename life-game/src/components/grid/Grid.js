@@ -90,6 +90,21 @@ class Grid extends Component {
     this.setState({ interval: event.target.value });
   };
 
+  handleClear = () => {
+    this.board = this.makeEmptyBoard();
+    this.setState({ cells: this.makeCells() });
+  };
+
+  handleRandom = () => {
+    for (let y = 0; y < this.rows; y++) {
+      for (let x = 0; x < this.cols; x++) {
+        this.board[y][x] = Math.random() >= 0.5;
+      }
+    }
+
+    this.setState({ cells: this.makeCells() });
+  };
+
   runIteration() {
     console.log('running iteration');
     let newBoard = this.makeEmptyBoard();
@@ -189,6 +204,12 @@ class Grid extends Component {
               Run
             </button>
           )}{' '}
+          <button className='button' onClick={this.handleRandom}>
+            Random
+          </button>
+          <button className='button' onClick={this.handleClear}>
+            Clear
+          </button>
         </div>
       </div>
     );
