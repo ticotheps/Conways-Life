@@ -175,27 +175,35 @@ class Grid extends Component {
   }
 
   render() {
+    const {
+      cells,
+      interval,
+      isRunning,
+      CELL_SIZE,
+      WIDTH,
+      HEIGHT,
+      counter,
+    } = this.state;
+
     return (
       <div>
-        <h2>Generation: {this.state.counter}</h2>
+        <h2>Generation: {counter}</h2>
         <br />
         <div
           className='Board'
           style={{
-            width: this.state.WIDTH,
-            height: this.state.HEIGHT,
-            backgroundSize: `${this.state.CELL_SIZE}px ${
-              this.state.CELL_SIZE
-            }px`,
+            width: WIDTH,
+            height: HEIGHT,
+            backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`,
           }}
           onClick={this.handleClick}
           ref={n => {
             this.boardRef = n;
           }}
         >
-          {this.state.cells.map(cell => (
+          {cells.map(cell => (
             <Cell
-              CELL_SIZE={this.state.CELL_SIZE}
+              CELL_SIZE={CELL_SIZE}
               x={cell.x}
               y={cell.y}
               key={`${cell.x}, ${cell.y}`}
@@ -205,11 +213,10 @@ class Grid extends Component {
         <div className='controls'>
           Update every
           <input
-            value={this.state.interval}
+            value={interval}
             onChange={this.handleIntervalChange}
-          />{' '}
-          msec{' '}
-          {this.state.isRunning ? (
+          /> msec{' '}
+          {isRunning ? (
             <button className='button' onClick={this.stopGame}>
               Stop
             </button>
