@@ -34,16 +34,16 @@ class Grid extends Component {
 
   // Create cells from this.board
   makeCells() {
-    let cells = [];
+    let cells_copy = [];
 
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.cols; x++) {
         if (this.board[y][x]) {
-          cells.push({ x, y });
+          cells_copy.push({ x, y });
         }
       }
     }
-    return cells;
+    return cells_copy;
   }
 
   getElementOffset() {
