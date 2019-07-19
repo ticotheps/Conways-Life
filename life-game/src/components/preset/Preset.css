@@ -1,9 +1,15 @@
 .presetButton {
-  border-radius: 15px;
-  padding: 5px 10px;
+  border-radius: 20px;
+  padding: 5px 20px;
   cursor: pointer;
 }
 
+.preset-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .individualPreset {
-  margin: 0px 20px 40px;
+  margin: 20px 0px 20px;
 }

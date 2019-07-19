@@ -4,14 +4,17 @@ import Rules from './components/rules/Rules';
 import About from './components/about/About';
 
 import './App.css';
+import './components/preset/Preset.css';
 
 function App() {
   return (
     <div className='App'>
       <h1>Conway's Game of Life</h1>
-      <Grid />
+      <div className='grid-about-container'>
+        <Grid />
+        <About />
+      </div>
       <Rules />
-      <About />
     </div>
   );
 }

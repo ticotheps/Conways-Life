@@ -211,72 +211,76 @@ class Grid extends Component {
     } = this.state;
 
     return (
-      <div>
-        <h2>Generation: {counter}</h2>
-        <br />
-        <div
-          className='Board'
-          style={{
-            width: WIDTH,
-            height: HEIGHT,
-            backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`,
-          }}
-          onClick={this.handleClick}
-          ref={n => {
-            this.boardRef = n;
-          }}
-        >
-          {cells.map(cell => (
-            <Cell
-              CELL_SIZE={CELL_SIZE}
-              x={cell.x}
-              y={cell.y}
-              key={`${cell.x}, ${cell.y}`}
-            />
-          ))}
-        </div>
-        <div className='controls'>
-          Update every
-          <input
-            value={interval}
-            onChange={this.handleIntervalChange}
-          /> msec{' '}
-          {isRunning ? (
-            <button className='button' onClick={this.stopGame}>
-              Stop
+      <div className='outer-grid-container'>
+        <div className='grid-container'>
+          <h2>Generation: {counter}</h2>
+          <br />
+          <div
+            className='Board'
+            style={{
+              width: WIDTH,
+              height: HEIGHT,
+              backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`,
+            }}
+            onClick={this.handleClick}
+            ref={n => {
+              this.boardRef = n;
+            }}
+          >
+            {cells.map(cell => (
+              <Cell
+                CELL_SIZE={CELL_SIZE}
+                x={cell.x}
+                y={cell.y}
+                key={`${cell.x}, ${cell.y}`}
+              />
+            ))}
+          </div>
+          <div className='controls'>
+            Update every
+            <input
+              value={interval}
+              onChange={this.handleIntervalChange}
+            /> msec{' '}
+            {isRunning ? (
+              <button className='individualPreset' onClick={this.stopGame}>
+                Stop
+              </button>
+            ) : (
+              <button className='individualPreset' onClick={this.runGame}>
+                Run
+              </button>
+            )}{' '}
+            <button className='individualPreset' onClick={this.handleRandom}>
+              Random
             </button>
-          ) : (
-            <button className='button' onClick={this.runGame}>
-              Run
+            <button className='individualPreset' onClick={this.handleClear}>
+              Clear
             </button>
-          )}{' '}
-          <button className='button' onClick={this.handleRandom}>
-            Random
-          </button>
-          <button className='button' onClick={this.handleClear}>
-            Clear
-          </button>
-          <button
-            className='button'
-            onClick={e => this.handlePreset(e)}
-            value='smile'
-          >
-            Smile
-          </button>
-          <button
-            className='button'
-            onClick={e => this.handlePreset(e)}
-            value='frown'
-          >
-            Frown
-          </button>
-          <button
-            className='button'
-            onClick={e => this.handlePreset(e)}
-            value='wink'
-          >
-            Wink
-          </button>
+          </div>
+          <div className='preset-container'>
+            <button
+              className='presetButton'
+              onClick={e => this.handlePreset(e)}
+              value='smile'
+            >
+              Smile
+            </button>
+            <button
+              className='presetButton'
+              onClick={e => this.handlePreset(e)}
+              value='frown'
+            >
+              Frown
+            </button>
+            <button
+              className='presetButton'
+              onClick={e => this.handlePreset(e)}
+              value='wink'
+            >
+              Wink
+            </button>
+          </div>
         </div>
       </div>
     );
