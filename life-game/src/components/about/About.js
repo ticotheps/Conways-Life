@@ -15,20 +15,24 @@ const About = () => {
         game continues to model concepts in: computer science, cryptography,
         mathematics, physics, complexity science, theoretical biology, etc.
       </p>
-      <h3>How Did I Re-Create His 'Game of Life'?</h3>
+      <h3>What Should MY Re-Created Model Look Like?</h3>
       <p className='polyas-content'>
-        Within the context of computer science, I re-created a "cellular
-        automaton" as a collection of black & white cells on this grid that can
+        Within the context of my re-created model, a "cellular automaton" would
+        be considered a collection of black & white cells on this grid that can
         evolve over "generations" (iterative unit of time) according to the
-        rules at the bottom of this page, which are based on 1 of 2 states
-        ("alive" or "dead") of neighboring cells.
+        rules defined at the bottom of this page. Those rules are applied to
+        each cell, during each generation, and are based on 1 of 2 states
+        ("alive" or "dead") of each neighboring cell.
       </p>
+      <h3>How Does It Work?</h3>
       <p className='polyas-content'>
         Before the game can start, an initial input (any collection of white
-        squares) must be provided by the user. Once the "Run" button is clicked,
-        the cells will begin to "evolve" according to the Conway's defined
-        rules. With each passing "generation," those same rules are applied each
-        time and simultaneously across all cells.
+        squares) must be provided by the user, either manually on the grid or by
+        choosing one of the provided preset options under the grid. After
+        providing an input, the "Run" button must be clicked, which will cause
+        the cells to "evolve" according to Conway's defined rules (as stated at
+        the bottom of this page). With each passing "generation," those SAME
+        rules are applied EVERY generation and SIMULTANEOUSLY across all cells.
       </p>
       <h2 className='polyas-heading'>Devising a Plan</h2>
       <p className='polyas-content'>
