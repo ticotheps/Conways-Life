@@ -263,8 +263,22 @@ input {
   flex-direction: row;
 }
 
+.about-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .polyas-heading {
   color: orangered;
+  padding: 10px;
+}
+
+.polyas-content {
+  width: 75%;
+  text-align: center;
+  padding: 5px;
 }
 
 .rules-container {
