@@ -33,7 +33,7 @@ const smile = [
 class Grid extends Component {
   state = {
     cells: [],
-    interval: 1000,
+    interval: 500,
     isRunning: false,
     CELL_SIZE: 10,
     WIDTH: 500,
@@ -91,7 +91,7 @@ class Grid extends Component {
     const offsetY = event.clientY - elemOffset.y;
     const x = Math.floor(offsetX / this.state.CELL_SIZE);
     const y = Math.floor(offsetY / this.state.CELL_SIZE);
-
+    console.log(x, y);
     if (x >= 0 && x <= this.cols && y >= 0 && y <= this.rows) {
       this.board[y][x] = !this.board[y][x];
     }
