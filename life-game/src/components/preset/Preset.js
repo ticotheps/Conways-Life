@@ -1,133 +1,154 @@
-import React from 'react';
+const smile = [
+  { x: 36, y: 11 },
+  { x: 14, y: 12 },
+  { x: 36, y: 12 },
+  { x: 14, y: 13 },
+  { x: 36, y: 13 },
+  { x: 14, y: 14 },
+  { x: 36, y: 14 },
+  { x: 14, y: 15 },
+  { x: 36, y: 15 },
+  { x: 14, y: 16 },
+  { x: 36, y: 16 },
+  { x: 14, y: 17 },
+  { x: 39, y: 25 },
+  { x: 11, y: 26 },
+  { x: 38, y: 27 },
+  { x: 13, y: 28 },
+  { x: 36, y: 29 },
+  { x: 14, y: 31 },
+  { x: 34, y: 31 },
+  { x: 17, y: 32 },
+  { x: 20, y: 33 },
+  { x: 23, y: 33 },
+  { x: 27, y: 33 },
+  { x: 31, y: 33 },
+];
 
-import './Preset.css';
+const frown = [
+  { x: 9, y: 10 },
+  { x: 9, y: 11 },
+  { x: 9, y: 12 },
+  { x: 9, y: 14 },
+  { x: 9, y: 13 },
+  { x: 9, y: 15 },
+  { x: 9, y: 17 },
+  { x: 9, y: 16 },
+  { x: 9, y: 18 },
+  { x: 9, y: 19 },
+  { x: 9, y: 20 },
+  { x: 38, y: 10 },
+  { x: 38, y: 11 },
+  { x: 38, y: 12 },
+  { x: 38, y: 13 },
+  { x: 38, y: 14 },
+  { x: 38, y: 16 },
+  { x: 38, y: 15 },
+  { x: 38, y: 17 },
+  { x: 38, y: 19 },
+  { x: 38, y: 18 },
+  { x: 38, y: 20 },
+  { x: 38, y: 22 },
+  { x: 37, y: 23 },
+  { x: 36, y: 24 },
+  { x: 35, y: 25 },
+  { x: 35, y: 26 },
+  { x: 35, y: 27 },
+  { x: 35, y: 28 },
+  { x: 36, y: 29 },
+  { x: 37, y: 30 },
+  { x: 39, y: 31 },
+  { x: 36, y: 24 },
+  { x: 35, y: 26 },
+  { x: 35, y: 27 },
+  { x: 36, y: 24 },
+  { x: 35, y: 26 },
+  { x: 34, y: 26 },
+  { x: 35, y: 26 },
+  { x: 34, y: 27 },
+  { x: 35, y: 28 },
+  { x: 36, y: 29 },
+  { x: 37, y: 30 },
+  { x: 39, y: 31 },
+  { x: 34, y: 29 },
+  { x: 34, y: 28 },
+  { x: 34, y: 30 },
+  { x: 35, y: 31 },
+  { x: 36, y: 32 },
+  { x: 37, y: 33 },
+  { x: 38, y: 34 },
+  { x: 39, y: 34 },
+  { x: 40, y: 34 },
+  { x: 41, y: 33 },
+  { x: 42, y: 32 },
+  { x: 43, y: 31 },
+  { x: 44, y: 30 },
+  { x: 44, y: 29 },
+  { x: 44, y: 28 },
+  { x: 44, y: 27 },
+  { x: 39, y: 22 },
+  { x: 39, y: 23 },
+  { x: 39, y: 24 },
+  { x: 40, y: 25 },
+  { x: 41, y: 26 },
+  { x: 43, y: 26 },
+  { x: 42, y: 26 },
+  { x: 43, y: 26 },
+  { x: 44, y: 27 },
+  { x: 43, y: 27 },
+  { x: 38, y: 22 },
+  { x: 38, y: 23 },
+  { x: 37, y: 24 },
+  { x: 37, y: 23 },
+  { x: 36, y: 24 },
+  { x: 36, y: 25 },
+  { x: 35, y: 25 },
+  { x: 35, y: 26 },
+  { x: 34, y: 26 },
+  { x: 6, y: 45 },
+  { x: 7, y: 43 },
+  { x: 6, y: 43 },
+  { x: 6, y: 45 },
+  { x: 5, y: 45 },
+  { x: 5, y: 44 },
+  { x: 7, y: 42 },
+  { x: 8, y: 41 },
+  { x: 9, y: 40 },
+  { x: 10, y: 39 },
+  { x: 11, y: 38 },
+  { x: 12, y: 37 },
+  { x: 13, y: 36 },
+  { x: 14, y: 35 },
+  { x: 15, y: 35 },
+  { x: 17, y: 35 },
+  { x: 16, y: 35 },
+  { x: 7, y: 43 },
+  { x: 5, y: 45 },
+  { x: 18, y: 35 },
+  { x: 19, y: 35 },
+  { x: 20, y: 35 },
+  { x: 21, y: 35 },
+  { x: 23, y: 35 },
+  { x: 22, y: 35 },
+  { x: 24, y: 35 },
+  { x: 25, y: 35 },
+  { x: 26, y: 35 },
+  { x: 28, y: 35 },
+  { x: 27, y: 35 },
+  { x: 29, y: 35 },
+  { x: 30, y: 35 },
+  { x: 31, y: 35 },
+  { x: 32, y: 35 },
+  { x: 33, y: 36 },
+  { x: 34, y: 37 },
+  { x: 35, y: 38 },
+  { x: 36, y: 39 },
+  { x: 37, y: 40 },
+  { x: 38, y: 41 },
+  { x: 39, y: 42 },
+  { x: 40, y: 43 },
+  { x: 41, y: 44 },
+  { x: 42, y: 45 },
+];
 
-const Preset = () => {
-  return (
-    <div>
-      <h2>Preset:</h2>
-      <br />
-      <div>
-        <div className='individualPreset'>
-          {/* <img /> */}
-          <button className='presetButton'>Preset 1</button>
-        </div>
-        <div className='individualPreset'>
-          {/* <img /> */}
-          <button className='presetButton'>Preset 2</button>
-        </div>
-        <div className='individualPreset'>
-          {/* <img /> */}
-          <button className='presetButton'>Preset 3</button>
-        </div>
-        <div className='individualPreset'>
-          {/* <img /> */}
-          <button className='presetButton'>Preset 4</button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Preset;
-
-/* <div className='girlSmile'>
-  <div class='Cell' style='left: 91px; top: 21px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 101px; top: 21px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 111px; top: 21px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 121px; top: 21px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 131px; top: 21px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 141px; top: 21px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 151px; top: 21px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 161px; top: 21px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 81px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 91px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 101px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 111px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 121px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 131px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 141px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 151px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 161px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 171px; top: 31px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 71px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 81px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 91px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 101px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 111px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 121px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 131px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 141px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 151px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 161px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 171px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 181px; top: 41px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 51px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 71px; top: 51px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 81px; top: 51px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 171px; top: 51px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 181px; top: 51px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 51px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 51px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 71px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 101px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 111px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 141px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 151px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 181px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 201px; top: 61px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 51px; top: 71px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 71px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 101px; top: 71px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 111px; top: 71px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 141px; top: 71px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 151px; top: 71px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 71px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 201px; top: 71px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 51px; top: 81px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 81px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 81px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 201px; top: 81px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 51px; top: 91px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 91px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 91px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 201px; top: 91px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 51px; top: 101px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 101px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 101px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 201px; top: 101px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 51px; top: 111px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 111px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 91px; top: 111px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 161px; top: 111px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 111px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 201px; top: 111px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 31px; top: 121px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 51px; top: 121px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 121px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 101px; top: 121px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 151px; top: 121px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 121px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 201px; top: 121px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 221px; top: 121px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 31px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 41px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 51px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 111px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 121px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 131px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 141px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 201px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 211px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 221px; top: 131px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 41px; top: 141px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 51px; top: 141px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 61px; top: 141px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 191px; top: 141px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 201px; top: 141px; width: 9px; height: 9px;' />
-  <div class='Cell' style='left: 211px; top: 141px; width: 9px; height: 9px;' />
-</div>; */
+export { smile, frown };
