@@ -235,7 +235,9 @@ class Grid extends Component {
             ))}
           </div>
           <div className='preset-container'>
-            <h4>Preset Options:</h4>
+            <h4>
+              Make your OWN design or choose a preset below & click "Run"!
+            </h4>
             <div className='preset-btns-container'>
               <button className='individualPreset' onClick={this.handleRandom}>
                 Random
@@ -264,7 +266,7 @@ class Grid extends Component {
             </div>
           </div>
           <div className='controls-container'>
-            <p className='controls-text'>Update every: </p>
+            <p className='controls-text'>Update Grid Every: </p>
             <input value={interval} onChange={this.handleIntervalChange} />
             <p className='controls-text'>msec</p>
             {isRunning ? (
