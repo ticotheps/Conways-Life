@@ -13,8 +13,6 @@ class Grid extends Component {
     WIDTH: 500,
     HEIGHT: 500,
     counter: 0,
-    smile: smile,
-    frown: frown,
   };
 
   rows = this.state.HEIGHT / this.state.CELL_SIZE;
@@ -116,7 +114,6 @@ class Grid extends Component {
 
   handlePreset = e => {
     this.handleClear();
-    const { smile, frown } = this.state;
     if (e.target.value === 'frown') {
       frown.forEach(item => {
         this.board[item.y][item.x] = true;
