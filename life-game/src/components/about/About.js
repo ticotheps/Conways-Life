@@ -3,7 +3,9 @@ import React from 'react';
 const About = () => {
   return (
     <div className='about-container'>
-      <br />
+      <h2 className='polyas-title'>
+        How to Use Polya's Problem Solving Technique to Build This Game
+      </h2>
       <h2 className='polyas-heading'>Understanding the Problem</h2>
       <h3>Why Did Conway Create This Model?</h3>
       <p className='polyas-content'>

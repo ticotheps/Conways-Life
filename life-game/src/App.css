@@ -303,6 +303,13 @@ input {
   height: 85vh;
 }
 
+.polyas-title {
+  background-color: orangered;
+  color: white;
+  padding: 5px 15px;
+  font-size: 3rem;
+}
+
 .polyas-heading {
   color: blue;
   padding: 10px;
