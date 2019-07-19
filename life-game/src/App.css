@@ -190,6 +190,12 @@ input {
   margin: 7px 20px 30px;
 }
 
+.generation-container {
+  display: flex;
+  flex-direction: flex-start;
+  margin: 10px 0px 10px 30px;
+}
+
 .Board {
   position: relative;
   margin: 0 auto;
@@ -219,11 +225,9 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 1px solid red;
 }
 
 .preset-container {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,7 +238,6 @@ input {
 }
 
 .preset-btns-container {
-  border: 1px solid green;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -248,8 +251,4 @@ input {
 .outer-grid-container {
   display: flex;
   flex-direction: row;
-}
-
-.grid-container {
-  border: 1px solid blue;
 }

@@ -211,8 +211,9 @@ class Grid extends Component {
     return (
       <div className='outer-grid-container'>
         <div className='grid-container'>
-          <h2>Generation: {counter}</h2>
-          <br />
+          <div className='generation-container'>
+            <h2>Generation: {counter}</h2>
+          </div>
           <div
             className='Board'
             style={{
