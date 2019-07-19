@@ -234,27 +234,8 @@ class Grid extends Component {
               />
             ))}
           </div>
-          <div className='controls'>
-            <p>Update every: </p>
-            <input
-              value={interval}
-              onChange={this.handleIntervalChange}
-            /> msec{' '}
-            {isRunning ? (
-              <button className='individualPreset' onClick={this.stopGame}>
-                Stop
-              </button>
-            ) : (
-              <button className='individualPreset' onClick={this.runGame}>
-                Run
-              </button>
-            )}{' '}
-            <button className='individualPreset' onClick={this.handleClear}>
-              Clear
-            </button>
-          </div>
           <div className='preset-container'>
-            <h3>Preset Options:</h3>
+            <h4>Preset Options:</h4>
             <div className='preset-btns-container'>
               <button className='individualPreset' onClick={this.handleRandom}>
                 Random
@@ -281,6 +262,23 @@ class Grid extends Component {
                 Wink
               </button>
             </div>
+          </div>
+          <div className='controls-container'>
+            <p className='controls-text'>Update every: </p>
+            <input value={interval} onChange={this.handleIntervalChange} />
+            <p className='controls-text'>msec</p>
+            {isRunning ? (
+              <button className='individualPreset' onClick={this.stopGame}>
+                Stop
+              </button>
+            ) : (
+              <button className='individualPreset' onClick={this.runGame}>
+                Run
+              </button>
+            )}
+            <button className='individualPreset' onClick={this.handleClear}>
+              Clear
+            </button>
           </div>
         </div>
       </div>

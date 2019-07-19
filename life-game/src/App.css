@@ -142,11 +142,15 @@ h1 {
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
 }
 
 h3 {
   font-size: 2.6rem;
+}
+
+h4 {
+  font-size: 2rem;
 }
 
 p,
@@ -154,9 +158,33 @@ li {
   font-size: 1.6rem;
 }
 
+button {
+  background-color: darkslategrey;
+  color: white;
+  width: 20%;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 5px 10px;
+  font-size: 1.6rem;
+}
+
+input {
+  width: 15%;
+  margin: 10px;
+  padding-left: 10px;
+  font-size: 1.6rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
 .App {
   text-align: center;
-  margin: 30px;
+  margin: 7px 20px 30px;
 }
 
 .Board {
@@ -174,6 +202,13 @@ li {
 
 .controls-container {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls-text {
+  font-size: 1.8rem;
 }
 
 .grid-about-container {
