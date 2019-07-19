@@ -14,7 +14,7 @@ function App() {
         <About />
       </div>
       <Rules />
-      <p className='footer'>Created by Tico S. Thepsourinthone © 2019</p>
+      <p className='footer'>© Tico S. Thepsourinthone 2019</p>
       <p className='footer'>
         See more of Tico's Work at{' '}
         <a
