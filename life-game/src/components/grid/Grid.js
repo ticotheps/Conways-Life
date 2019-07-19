@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Cell from './Cell';
-import { smile, frown, jordan } from '../preset/Preset';
+import { smile, frown, wink } from '../preset/Preset';
 
 import './Grid.css';
 
@@ -124,8 +124,8 @@ class Grid extends Component {
       smile.forEach(item => {
         this.board[item.y][item.x] = true;
       });
-    } else if (e.target.value === 'jordan') {
-      jordan.forEach(item => {
+    } else if (e.target.value === 'wink') {
+      wink.forEach(item => {
         this.board[item.y][item.x] = true;
       });
     }
@@ -273,9 +273,9 @@ class Grid extends Component {
           <button
             className='button'
             onClick={e => this.handlePreset(e)}
-            value='jordan'
+            value='wink'
           >
-            Jordan
+            Wink
           </button>
           <button className='button' onClick={this.handlePreset}>
             Preset 4
