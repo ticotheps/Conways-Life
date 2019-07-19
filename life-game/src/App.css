@@ -144,7 +144,9 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: blue;
 }
 
 h3 {
@@ -183,9 +185,9 @@ button:hover {
 input {
   width: 12%;
   margin: 5px 10px;
-  padding-left: 10px;
   font-size: 1.6rem;
   border-radius: 5px;
+  text-align: center;
 }
 
 .App {
@@ -222,6 +224,8 @@ input {
 
 .controls-text {
   font-size: 1.8rem;
+  font-weight: 600;
+  color: blue;
 }
 
 .grid-about-container {
@@ -238,7 +242,9 @@ input {
 
 .user-instructions {
   font-style: italic;
+  font-weight: 700;
   margin: 5px;
+  color: blue;
 }
 
 .preset-btns-container {
@@ -255,6 +261,10 @@ input {
 .outer-grid-container {
   display: flex;
   flex-direction: row;
+}
+
+.polyas-heading {
+  color: orangered;
 }
 
 .rules-container {
