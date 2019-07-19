@@ -127,7 +127,7 @@ class Grid extends Component {
   };
 
   handleRandom = () => {
-    this.stopGame();
+    this.handleClear();
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.cols; x++) {
         this.board[y][x] = Math.random() >= 0.5;
@@ -140,7 +140,7 @@ class Grid extends Component {
   };
 
   handlePreset = e => {
-    this.stopGame();
+    this.handleClear();
     const { preset } = this.state;
     preset.forEach(item => {
       this.board[item.y][item.x] = true;
