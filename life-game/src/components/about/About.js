@@ -36,12 +36,18 @@ const About = () => {
       </p>
       <h2 className='polyas-heading'>Devising a Plan</h2>
       <p className='polyas-content'>
-        A mathematician named John Conway created this zero-player game in 1970
-        to create a model that enabled him to study "cellular automata" (the
-        plural form of "cellular automaton"). A cellular automaton is a
-        collection of cells on a grid that evolve over "generations" (a unit of
-        time measurement in the game) according to rules based on the "states"
-        ("alive" or "dead") neighboring cells.
+        (1) First, we need to create a board with a grid that can render black &
+        white cells, which will revert between the colors when clicked on.
+      </p>
+      <p className='polyas-content'>
+        (2) Then, we need to implement functionality to give the user the
+        ability to control aspects of the game: a "Run"/"Stop" button to proceed
+        or pause the cells' evolution, a "Clear" button to return to a board of
+        all black cells, and a user input area that allows the user to specify
+        the time between each iterated "generation".
+      </p>
+      <p className='polyas-content'>
+        (3) Lastly, we need to give the user the option to select preset inputs.
       </p>
       <h2 className='polyas-heading'>Implementing the Plan</h2>
       <p className='polyas-content'>
