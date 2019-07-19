@@ -267,7 +267,7 @@ class Grid extends Component {
             </div>
           </div>
           <div className='controls-container'>
-            <p className='controls-text'>Update Grid Every: </p>
+            <p className='controls-text'>Update Every: </p>
             <input value={interval} onChange={this.handleIntervalChange} />
             <p className='controls-text'>msec</p>
             {isRunning ? (

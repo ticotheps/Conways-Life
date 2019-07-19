@@ -8,11 +8,11 @@ const About = () => {
       <h3 className='polyas-heading'>Understanding the Problem</h3>
       <p className='polyas-content'>
         A mathematician named John Conway created this zero-player game in 1970
-        to create a model that enabled him to study "cellular automata" (the
-        plural form of "cellular automaton"). A cellular automaton is a
+        to create a model that would enable him to study "cellular automata"
+        (the plural form of "cellular automaton"). A cellular automaton is a
         collection of cells on a grid that evolve over "generations" (a unit of
-        time measurement in the game) according to rules based on the "states"
-        ("alive" or "dead") neighboring cells.
+        time in the game) according to rules based on the one of two "states"
+        ("alive" or "dead") of neighboring cells.
       </p>
       <h3 className='polyas-heading'>Devising a Plan</h3>
       <p className='polyas-content'>
