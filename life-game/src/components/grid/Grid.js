@@ -211,9 +211,9 @@ class Grid extends Component {
     return (
       <div className='outer-grid-container'>
         <div className='grid-container'>
-          <div className='generation-container'>
-            <h2>Generation: {counter}</h2>
-          </div>
+          <h4 className='user-instructions'>
+            Create your OWN design or choose a preset below & click "Run"!
+          </h4>
           <div
             className='Board'
             style={{
@@ -236,34 +236,38 @@ class Grid extends Component {
             ))}
           </div>
           <div className='preset-container'>
-            <h4 className='user-instructions'>
-              Make your OWN design or choose a preset below & click "Run"!
-            </h4>
+            <div className='generation-container'>
+              <h2>Generation: {counter}</h2>
+            </div>
             <div className='preset-btns-container'>
-              <button className='presetButton' onClick={this.handleRandom}>
-                Random
-              </button>
-              <button
-                className='presetButton'
-                onClick={e => this.handlePreset(e)}
-                value='smile'
-              >
-                Smile
-              </button>
-              <button
-                className='presetButton'
-                onClick={e => this.handlePreset(e)}
-                value='frown'
-              >
-                Frown
-              </button>
-              <button
-                className='presetButton'
-                onClick={e => this.handlePreset(e)}
-                value='wink'
-              >
-                Wink
-              </button>
+              <div className='inner-preset-top-container'>
+                <button className='presetButton' onClick={this.handleRandom}>
+                  Random
+                </button>
+                <button
+                  className='presetButton'
+                  onClick={e => this.handlePreset(e)}
+                  value='smile'
+                >
+                  Smile
+                </button>
+              </div>
+              <div className='inner-preset-bottom-container'>
+                <button
+                  className='presetButton'
+                  onClick={e => this.handlePreset(e)}
+                  value='frown'
+                >
+                  Frown
+                </button>
+                <button
+                  className='presetButton'
+                  onClick={e => this.handlePreset(e)}
+                  value='wink'
+                >
+                  Wink
+                </button>
+              </div>
             </div>
           </div>
           <div className='controls-container'>
@@ -271,15 +275,15 @@ class Grid extends Component {
             <input value={interval} onChange={this.handleIntervalChange} />
             <p className='controls-text'>msec</p>
             {isRunning ? (
-              <button className='individualPreset' onClick={this.stopGame}>
+              <button className='controls-btn' onClick={this.stopGame}>
                 Stop
               </button>
             ) : (
-              <button className='individualPreset' onClick={this.runGame}>
+              <button className='controls-btn' onClick={this.runGame}>
                 Run
               </button>
             )}
-            <button className='individualPreset' onClick={this.handleClear}>
+            <button className='controls-btn' onClick={this.handleClear}>
               Clear
             </button>
           </div>
