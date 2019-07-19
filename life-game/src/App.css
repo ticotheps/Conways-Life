@@ -169,7 +169,7 @@ li {
 button {
   background-color: darkslategrey;
   color: white;
-  width: 45%;
+  width: 40%;
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 1.6rem;
@@ -242,6 +242,13 @@ input {
   align-items: center;
 }
 
+.counter {
+  color: blue;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
 .user-instructions {
   font-size: 1.6rem;
   font-style: italic;
@@ -251,7 +258,7 @@ input {
 }
 
 .preset-btns-container {
-  width: 75%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -283,8 +290,14 @@ input {
 
 .about-container {
   display: flex;
+  background-color: lightgray;
   flex-direction: column;
   align-items: center;
+  width: 50%;
+  margin: 25px 20px;
+  border-radius: 4px;
+  overflow: scroll;
+  height: 85vh;
 }
 
 .polyas-heading {
@@ -293,7 +306,7 @@ input {
 }
 
 .polyas-content {
-  width: 75%;
+  width: 90%;
   text-align: center;
   padding: 5px;
 }
@@ -302,6 +315,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 30px auto;
   padding: 20px;
 }
 
@@ -310,8 +324,8 @@ input {
   flex-direction: column;
   text-align: left;
   background-color: darkslategray;
-  width: 50%;
-  padding: 15px 30px;
+  width: 95%;
+  padding: 20px 30px;
   border-radius: 4px;
 }
 

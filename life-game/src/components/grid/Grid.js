@@ -237,7 +237,9 @@ class Grid extends Component {
           </div>
           <div className='preset-container'>
             <div className='generation-container'>
-              <h2>Generation: {counter}</h2>
+              <h2>
+                Generation: <span className='counter'>{counter}</span>
+              </h2>
             </div>
             <div className='preset-btns-container'>
               <div className='inner-preset-top-container'>
