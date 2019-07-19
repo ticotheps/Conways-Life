@@ -20,3 +20,7 @@
 **yarn-debug.log*
 **yarn-error.log*
 **yarn.lock
+
+
+# File Name to solve Netlify 404 error: "_redirects"
+# File Contents to solve Netlify 404 error: "/*    /index.html  200"

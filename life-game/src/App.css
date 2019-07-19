@@ -1,0 +1,364 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: aqua;
+  color: darkslategrey;
+}
+
+h1 {
+  font-family: 'Lobster Two', cursive;
+  font-size: 4rem;
+  color: orangered;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: blue;
+}
+
+h3 {
+  font-size: 2rem;
+  color: orangered;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+li {
+  font-size: 2rem;
+}
+
+button {
+  background-color: darkslategrey;
+  color: white;
+  width: 40%;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+input {
+  width: 12%;
+  margin: 5px 10px;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+  margin: 7px 20px 30px;
+}
+
+.Board {
+  border: 2px solid orangered;
+  border-radius: 3px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #000;
+  background-image: linear-gradient(#333 1px, transparent 1px),
+    linear-gradient(90deg, #333 1px, transparent 1px);
+}
+
+.Cell {
+  background: #ccc;
+  position: absolute;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+}
+
+.controls-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: blue;
+}
+
+.grid-about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.preset-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.generation-container {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.counter {
+  color: blue;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.user-instructions {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 700;
+  margin: 10px;
+  color: blue;
+}
+
+.preset-btns-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.inner-preset-top-container,
+.inner-preset-bottom-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5px auto 0px;
+  width: 100%;
+}
+
+.presetButton {
+  color: darkslategrey;
+  background-color: white;
+}
+
+.controls-btn {
+  width: 20%;
+  margin: 0px auto 0px;
+}
+
+.outer-grid-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-container {
+  display: flex;
+  border: 2px solid darkslategray;
+  background-color: lightgray;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 35px 20px;
+  border-radius: 4px;
+  overflow: scroll;
+  height: 85vh;
+}
+
+.polyas-title {
+  background-color: orangered;
+  color: white;
+  padding: 5px 15px;
+  font-size: 3rem;
+}
+
+.polyas-heading {
+  color: blue;
+  padding: 10px;
+}
+
+.polyas-content {
+  width: 90%;
+  text-align: center;
+  padding: 5px;
+  line-height: 1.3;
+}
+
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.rules-list-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: darkslategray;
+  width: 50%;
+  padding: 20px 30px;
+  border-radius: 4px;
+}
+
+.rules-content {
+  color: white;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.footer {
+  margin: 10px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.footer-plug {
+  text-decoration: none;
+  color: orangered;
+}
+
+.footer-plug:hover {
+  color: blue;
+  font-size: 2rem;
+  cursor: pointer;
+}
