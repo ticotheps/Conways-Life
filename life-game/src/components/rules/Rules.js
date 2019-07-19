@@ -2,10 +2,10 @@ import React from 'react';
 
 const Rules = () => {
   return (
-    <div>
+    <div className='rules-container'>
       <h2>Rules:</h2>
       <br />
-      <ol className='ruleList'>
+      <ol>
         <li>
           1. Any live cell with fewer than two live neighbors dies, as if caused
           by under population.
