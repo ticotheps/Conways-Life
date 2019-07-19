@@ -215,7 +215,7 @@ input {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 
 .controls-text {
@@ -255,7 +255,7 @@ input {
   font-size: 1.6rem;
   font-style: italic;
   font-weight: 700;
-  margin: 5px;
+  margin: 10px;
   color: blue;
 }
 
@@ -282,7 +282,7 @@ input {
 
 .controls-btn {
   width: 20%;
-  margin: 5px auto 0px;
+  margin: 0px auto 0px;
 }
 
 .outer-grid-container {
@@ -297,7 +297,7 @@ input {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  margin: 25px 20px;
+  margin: 35px 20px;
   border-radius: 4px;
   overflow: scroll;
   height: 85vh;
@@ -312,7 +312,7 @@ input {
   width: 90%;
   text-align: center;
   padding: 5px;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .rules-container {

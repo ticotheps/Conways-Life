@@ -50,13 +50,26 @@ const About = () => {
         (3) Lastly, we need to give the user the option to select preset inputs.
       </p>
       <h2 className='polyas-heading'>Implementing the Plan</h2>
+      <h3>Creating the Board</h3>
       <p className='polyas-content'>
-        A mathematician named John Conway created this zero-player game in 1970
-        to create a model that enabled him to study "cellular automata" (the
-        plural form of "cellular automaton"). A cellular automaton is a
-        collection of cells on a grid that evolve over "generations" (a unit of
-        time measurement in the game) according to rules based on the "states"
-        ("alive" or "dead") neighboring cells.
+        (1a) Within our React app, we'll need to define 3 things: the desired
+        width of the board, the desired height of the board, and the length of
+        individual cell's side (in pixels).
+      </p>
+      <h3>Making the Grid</h3>
+      <p className='polyas-content'>
+        (1b) Using CSS and linear gradients, we're able to color the board black
+        and create the necessary vertical & horizontal lines to make a grid.
+      </p>
+      <h3>Creating Interactive Cells</h3>
+      <p className='polyas-content'>
+        (1c) First, we'll create a "state" object that will keep track of an
+        array of arrays, which will contain a value of "true" ("alive") or
+        "false" ("dead") for EACH cell's current state.
+      </p>
+      <h3>Creating the Board</h3>
+      <p className='polyas-content'>
+        (3) Lastly, we need to give the user the option to select preset inputs.
       </p>
       <h2 className='polyas-heading'>Reflecting/Iterating</h2>
       <p className='polyas-content'>
