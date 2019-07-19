@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Cell from './Cell';
 import { smile, frown, wink } from '../preset/Preset';
 
-import './Grid.css';
-
 class Grid extends Component {
   state = {
     cells: [],
@@ -259,27 +257,30 @@ class Grid extends Component {
             </button>
           </div>
           <div className='preset-container'>
-            <button
-              className='presetButton'
-              onClick={e => this.handlePreset(e)}
-              value='smile'
-            >
-              Smile
-            </button>
-            <button
-              className='presetButton'
-              onClick={e => this.handlePreset(e)}
-              value='frown'
-            >
-              Frown
-            </button>
-            <button
-              className='presetButton'
-              onClick={e => this.handlePreset(e)}
-              value='wink'
-            >
-              Wink
-            </button>
+            <h3>Preset Options:</h3>
+            <div className='preset-btns-container'>
+              <button
+                className='presetButton'
+                onClick={e => this.handlePreset(e)}
+                value='smile'
+              >
+                Smile
+              </button>
+              <button
+                className='presetButton'
+                onClick={e => this.handlePreset(e)}
+                value='frown'
+              >
+                Frown
+              </button>
+              <button
+                className='presetButton'
+                onClick={e => this.handlePreset(e)}
+                value='wink'
+              >
+                Wink
+              </button>
+            </div>
           </div>
         </div>
       </div>

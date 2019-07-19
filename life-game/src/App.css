@@ -130,4 +130,49 @@ table {
 
 .App {
   text-align: center;
+  margin: 30px;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.Board {
+  position: relative;
+  margin: 0 auto;
+  background-color: #000;
+  background-image: linear-gradient(#333 1px, transparent 1px),
+    linear-gradient(90deg, #333 1px, transparent 1px);
+}
+
+.Cell {
+  background: #ccc;
+  position: absolute;
+}
+
+.grid-about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid red;
+}
+
+.preset-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.preset-btns-container {
+  border: 1px solid green;
+}
+
+.outer-grid-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-container {
+  border: 1px solid blue;
 }

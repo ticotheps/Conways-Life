@@ -4,7 +4,6 @@ import Rules from './components/rules/Rules';
 import About from './components/about/About';
 
 import './App.css';
-import './components/preset/Preset.css';
 
 function App() {
   return (
