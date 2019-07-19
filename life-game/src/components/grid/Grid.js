@@ -277,9 +277,6 @@ class Grid extends Component {
           >
             Wink
           </button>
-          <button className='button' onClick={this.handlePreset}>
-            Preset 4
-          </button>
         </div>
       </div>
     );
