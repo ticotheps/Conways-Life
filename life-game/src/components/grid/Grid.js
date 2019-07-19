@@ -277,7 +277,7 @@ class Grid extends Component {
             onClick={e => this.handlePreset(e)}
             value='smile'
           >
-            Preset 1
+            Smiley
           </button>
           <button className='button' onClick={this.handlePreset}>
             Preset 2
