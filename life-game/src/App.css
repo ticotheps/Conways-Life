@@ -270,3 +270,19 @@ input {
 .rules-container {
   padding: 20px;
 }
+
+.footer {
+  margin: 10px;
+  font-style: italic;
+}
+
+.footer-plug {
+  text-decoration: none;
+  color: orangered;
+}
+
+.footer-plug:hover {
+  color: blue;
+  font-size: 2rem;
+  cursor: pointer;
+}
