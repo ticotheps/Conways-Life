@@ -235,7 +235,7 @@ class Grid extends Component {
             ))}
           </div>
           <div className='controls'>
-            Update every
+            <p>Update every: </p>
             <input
               value={interval}
               onChange={this.handleIntervalChange}
@@ -249,9 +249,6 @@ class Grid extends Component {
                 Run
               </button>
             )}{' '}
-            <button className='individualPreset' onClick={this.handleRandom}>
-              Random
-            </button>
             <button className='individualPreset' onClick={this.handleClear}>
               Clear
             </button>
@@ -259,6 +256,9 @@ class Grid extends Component {
           <div className='preset-container'>
             <h3>Preset Options:</h3>
             <div className='preset-btns-container'>
+              <button className='individualPreset' onClick={this.handleRandom}>
+                Random
+              </button>
               <button
                 className='presetButton'
                 onClick={e => this.handlePreset(e)}

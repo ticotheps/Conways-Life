@@ -128,13 +128,35 @@ table {
   border-spacing: 0;
 }
 
-.App {
-  text-align: center;
-  margin: 30px;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: aqua;
+  color: darkslategrey;
+}
+
+h1 {
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+}
+
+.App {
+  text-align: center;
+  margin: 30px;
 }
 
 .Board {
@@ -148,6 +170,10 @@ h2 {
 .Cell {
   background: #ccc;
   position: absolute;
+}
+
+.controls-container {
+  display: flex;
 }
 
 .grid-about-container {
@@ -166,6 +192,9 @@ h2 {
 
 .preset-btns-container {
   border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .outer-grid-container {
