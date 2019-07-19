@@ -17,7 +17,7 @@ function App() {
       <p className='footer'>Created by Tico S. Thepsourinthone © 2019</p>
       <p className='footer'>
         See more of Tico's Work at{' '}
-        <a href='heytico.com' target='_blank' className='footer-plug'>
+        <a href='http://heytico.com' target='_blank' className='footer-plug'>
           heytico.com
         </a>
       </p>
