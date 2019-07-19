@@ -100,6 +100,7 @@ class Grid extends Component {
   };
 
   handleRandom = () => {
+    this.stopGame();
     this.handleClear();
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.cols; x++) {
@@ -113,6 +114,7 @@ class Grid extends Component {
   };
 
   handlePreset = e => {
+    this.stopGame();
     this.handleClear();
     if (e.target.value === 'frown') {
       frown.forEach(item => {
