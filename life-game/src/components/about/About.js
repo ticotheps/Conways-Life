@@ -61,24 +61,59 @@ const About = () => {
         (1b) Using CSS and linear gradients, we're able to color the board black
         and create the necessary vertical & horizontal lines to make a grid.
       </p>
-      <h3>Creating Interactive Cells</h3>
+      <h3>Storing Cells' "Dead" or "Alive" State</h3>
       <p className='polyas-content'>
-        (1c) First, we'll create a "state" object that will keep track of an
-        array of arrays, which will contain a value of "true" ("alive") or
-        "false" ("dead") for EACH cell's current state.
+        (1c) First, we'll create a "state" object in our main "Grid" component,
+        that will keep track of each cell's "dead" or "alive" state as an array
+        of arrays.
       </p>
-      <h3>Creating the Board</h3>
+      <h3>Retrieving Coordinates of User-Targeted Cells</h3>
       <p className='polyas-content'>
-        (3) Lastly, we need to give the user the option to select preset inputs.
+        (1d) Then, we'll create "onClick" event handlers and a "handleClick()"
+        function that will provide the coordinates of the targeted cell, which
+        then need to be converted to coordinates that are relative to our board.
+      </p>
+      <h3>Rendering Cells to the Board</h3>
+      <p className='polyas-content'>
+        (1e) Using a "makeCells()" function, we're able to access the individual
+        values of EACH cell in our board and can set those values to "true" or
+        "false", based on our recently-converted coordinates from step (1d).{' '}
+      </p>
+      <h3>Running/Stopping the Game</h3>
+      <p className='polyas-content'>
+        (2a) First, we need to create a "Run"/"Stop" button that progresses or
+        pauses the evolution process for the cells. These two buttons will be
+        displayed as a single button, which conditionally renders based on
+        whether "isRunning" in our state object is "true" or "false".
+      </p>
+      <h3>Changing the Speed of Evolution</h3>
+      <p className='polyas-content'>
+        (2b) Next, using an "input" element, the "setState()" function, and a
+        new "handleInterval()" function, we will give the user the ability to
+        increase or decrease the speed between each "generation" (in units of
+        milliseconds) while the "runIteration()" and the calculateNeighbors()
+        functions are being executed.
+      </p>
+      <h3>Creating Preset Options for the User</h3>
+      <p className='polyas-content'>
+        (3) Lastly, we'll create 4 new buttons ("Random", "Smile", "Frown", &
+        "Wink") that will provide pre-rendered boards with unique designs for
+        the user to experience. All pre-rendered boards are arrays of objects
+        containing, an "x" and "y" coordinate that are to be rendered via the
+        "setState()" function.
       </p>
       <h2 className='polyas-heading'>Reflecting/Iterating</h2>
       <p className='polyas-content'>
-        A mathematician named John Conway created this zero-player game in 1970
-        to create a model that enabled him to study "cellular automata" (the
-        plural form of "cellular automaton"). A cellular automaton is a
-        collection of cells on a grid that evolve over "generations" (a unit of
-        time measurement in the game) according to rules based on the "states"
-        ("alive" or "dead") neighboring cells.
+        Upon reflecting on the project, the following are a few areas that could
+        be improved: (a) refactoring "Grid.js" and creating new sub-components
+        to improve readability, (b) using 'switch' statements in the
+        "handlePreset()" function for improved readability & increased
+        modularity, in case more presets were to be added, and (c) rendering all
+        of "App.js" in the web browser's content window (without the possibility
+        of a user having a vertical/horizontal scroll bar) so that the (x, y)
+        coordinates returned from the "getElementOffset()" function could never
+        be affected by varying values for "window.pageXOffset" &
+        "window.pageYOffset".
       </p>
     </div>
   );
