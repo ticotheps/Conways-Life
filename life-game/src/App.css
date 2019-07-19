@@ -138,7 +138,9 @@ body {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-family: 'Lobster Two', cursive;
+  font-size: 3.5rem;
+  color: orangered;
 }
 
 h2 {
@@ -166,6 +168,13 @@ button {
   border-radius: 20px;
   margin: 5px 10px;
   font-size: 1.6rem;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
 }
 
 input {
@@ -174,12 +183,6 @@ input {
   padding-left: 10px;
   font-size: 1.6rem;
   border-radius: 5px;
-}
-
-button:hover {
-  background-color: blue;
-  color: white;
-  cursor: pointer;
 }
 
 .App {
@@ -205,6 +208,7 @@ button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
 .controls-text {
@@ -225,11 +229,20 @@ button:hover {
   justify-content: center;
 }
 
+.user-instructions {
+  font-style: italic;
+}
+
 .preset-btns-container {
   border: 1px solid green;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.presetButton {
+  color: darkslategrey;
+  background-color: white;
 }
 
 .outer-grid-container {

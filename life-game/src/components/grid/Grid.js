@@ -235,11 +235,11 @@ class Grid extends Component {
             ))}
           </div>
           <div className='preset-container'>
-            <h4>
+            <h4 className='user-instructions'>
               Make your OWN design or choose a preset below & click "Run"!
             </h4>
             <div className='preset-btns-container'>
-              <button className='individualPreset' onClick={this.handleRandom}>
+              <button className='presetButton' onClick={this.handleRandom}>
                 Random
               </button>
               <button

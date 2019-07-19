@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <h1>Conway's Game of Life</h1>
+      <h1>Welcome to Conway's Game of Life!</h1>
       <div className='grid-about-container'>
         <Grid />
         <About />
