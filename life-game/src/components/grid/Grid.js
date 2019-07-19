@@ -3,6 +3,33 @@ import Cell from './Cell';
 
 import './Grid.css';
 
+const smile = [
+  { x: 36, y: 11 },
+  { x: 14, y: 12 },
+  { x: 36, y: 12 },
+  { x: 14, y: 13 },
+  { x: 36, y: 13 },
+  { x: 14, y: 14 },
+  { x: 36, y: 14 },
+  { x: 14, y: 15 },
+  { x: 36, y: 15 },
+  { x: 14, y: 16 },
+  { x: 36, y: 16 },
+  { x: 14, y: 17 },
+  { x: 39, y: 25 },
+  { x: 11, y: 26 },
+  { x: 38, y: 27 },
+  { x: 13, y: 28 },
+  { x: 36, y: 29 },
+  { x: 14, y: 31 },
+  { x: 34, y: 31 },
+  { x: 17, y: 32 },
+  { x: 20, y: 33 },
+  { x: 23, y: 33 },
+  { x: 27, y: 33 },
+  { x: 31, y: 33 },
+];
+
 class Grid extends Component {
   state = {
     cells: [],
@@ -12,6 +39,7 @@ class Grid extends Component {
     WIDTH: 500,
     HEIGHT: 500,
     counter: 0,
+    preset: smile,
   };
 
   rows = this.state.HEIGHT / this.state.CELL_SIZE;
@@ -48,8 +76,9 @@ class Grid extends Component {
 
   getElementOffset() {
     const rect = this.boardRef.getBoundingClientRect();
+    // Document.documentElement returns the Element that
+    // is the root element of the document
     const doc = document.documentElement;
-
     return {
       x: rect.left + window.pageXOffset - doc.clientLeft,
       y: rect.top + window.pageYOffset - doc.clientTop,
@@ -62,7 +91,6 @@ class Grid extends Component {
     const offsetY = event.clientY - elemOffset.y;
     const x = Math.floor(offsetX / this.state.CELL_SIZE);
     const y = Math.floor(offsetY / this.state.CELL_SIZE);
-    // console.log(x, y);
 
     if (x >= 0 && x <= this.cols && y >= 0 && y <= this.rows) {
       this.board[y][x] = !this.board[y][x];
@@ -99,11 +127,24 @@ class Grid extends Component {
   };
 
   handleRandom = () => {
+    this.stopGame();
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.cols; x++) {
         this.board[y][x] = Math.random() >= 0.5;
       }
     }
+    this.setState({
+      counter: 0,
+      cells: this.makeCells(),
+    });
+  };
+
+  handlePreset = e => {
+    this.stopGame();
+    const { preset } = this.state;
+    preset.forEach(item => {
+      this.board[item.y][item.x] = true;
+    });
     this.setState({
       counter: 0,
       cells: this.makeCells(),
@@ -230,6 +271,22 @@ class Grid extends Component {
           </button>
           <button className='button' onClick={this.handleClear}>
             Clear
+          </button>
+          <button
+            className='button'
+            onClick={e => this.handlePreset(e)}
+            value='smile'
+          >
+            Preset 1
+          </button>
+          <button className='button' onClick={this.handlePreset}>
+            Preset 2
+          </button>
+          <button className='button' onClick={this.handlePreset}>
+            Preset 3
+          </button>
+          <button className='button' onClick={this.handlePreset}>
+            Preset 4
           </button>
         </div>
       </div>
