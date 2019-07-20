@@ -21,7 +21,7 @@ function App() {
             <a
               href='https://www.linkedin.com/in/ticotheps/'
               target='_blank'
-              className='author-pic-link'
+              className='author-pic-link wobble-hor-bottom'
               rel='noopener noreferrer'
             >
               <img className='author-pic' src={tico} alt='author headshot' />
