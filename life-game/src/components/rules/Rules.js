@@ -3,7 +3,16 @@ import React from 'react';
 const Rules = () => {
   return (
     <div className='rules-container'>
-      <h2>Rules of The Game:</h2>
+      <h2>
+        <a
+          className='rules-link'
+          href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Rules of The Game:
+        </a>
+      </h2>
       <br />
       <ol className='rules-list-container'>
         <li className='rules-content'>

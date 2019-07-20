@@ -4,7 +4,16 @@ const About = () => {
   return (
     <div className='about-container'>
       <h2 className='polyas-title'>
-        How to Use Polya's Problem Solving Technique to Build This Game
+        Using{' '}
+        <a
+          className='polyas-link'
+          href='https://en.wikipedia.org/wiki/How_to_Solve_It'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Polya's 4 Principles
+        </a>{' '}
+        to Build This Game
       </h2>
       <h2 className='polyas-heading'>Understanding the Problem</h2>
       <h3>Why Did Conway Create This Model?</h3>
