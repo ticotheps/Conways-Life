@@ -192,11 +192,11 @@ input {
 
 .App {
   text-align: center;
-  margin: 7px 20px 30px;
+  padding: 7px 0px 0px;
 }
 
 .Board {
-  border: 2px solid orangered;
+  border: 2px solid blue;
   border-radius: 3px;
   position: relative;
   margin: 0px 10px;
@@ -335,33 +335,46 @@ input {
 }
 
 .rules-footer-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  margin: 50px auto 50px;
 }
 
 .rules-container {
+  width: 100%;
+  background-image: url('glider.gif');
+  background-repeat: repeat;
+  background-size: 20%;
+  background-position: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px auto;
-  padding: 20px;
+  margin: 0px auto;
+  padding: 30px;
+}
+
+.rules-title-container {
+  display: flex;
+  justify-content: center;
 }
 
 .rules-list-container {
+  border: 2px solid darkslategray;
   display: flex;
   flex-direction: column;
   text-align: left;
-  background-color: darkslategray;
+  background-color: aqua;
   width: 50%;
   padding: 20px 30px;
   border-radius: 4px;
 }
 
 .rules-content {
-  color: white;
+  color: darkslategray;
+  font-weight: 600;
   margin: 10px 0;
   line-height: 1.5;
 }
@@ -369,6 +382,7 @@ input {
 .rules-link {
   text-decoration: none;
   color: blue;
+  padding: 5px 10px;
 }
 
 .rules-link:hover {
@@ -381,14 +395,14 @@ input {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
+  margin: 25px 0px 0px;
   padding: 10px;
   width: 50vw;
   height: 15vh;
 }
 
 .footer {
-  margin: 10px;
+  margin: 5px;
   font-style: italic;
   font-weight: 600;
 }
@@ -407,7 +421,6 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid green;
   width: 10%;
   padding: 10px;
 }
@@ -419,7 +432,6 @@ input {
 }
 
 .author-pic-link {
-  border: 1px solid yellow;
   padding: 0px;
 }
 

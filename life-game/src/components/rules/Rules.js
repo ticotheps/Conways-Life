@@ -3,18 +3,19 @@ import React from 'react';
 const Rules = () => {
   return (
     <div className='rules-container'>
-      <h2>
-        <a
-          className='rules-link'
-          href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Rules of The Game:
-        </a>
-      </h2>
-      <br />
       <ol className='rules-list-container'>
+        <div className='rules-title-container'>
+          <h2>
+            <a
+              className='rules-link'
+              href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Rules of The Game:
+            </a>
+          </h2>
+        </div>
         <li className='rules-content'>
           (1) Any "live" cell (a white square) with fewer than TWO live
           neighbors "dies" (becomes a black square), as if caused by
